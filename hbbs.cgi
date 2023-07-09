@@ -66,7 +66,8 @@ $cssfile = "../css.css";
      $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
 
     # SJIS にコード変換
-    &jcode'convert(*value, 'sjis');
+    # ※ 使うときはコメント外す
+#    &jcode'convert(*value, 'sjis');
 
     # タグは無効（タグ自体を表示するように置換）
     $value =~ s/</&lt;/g;
